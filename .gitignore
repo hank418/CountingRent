@@ -95,3 +95,4 @@ ENV/
 *.key
 *.crt
 *.db
+*.swp
