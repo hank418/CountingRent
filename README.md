@@ -22,6 +22,7 @@ $ vim secure.key
 >    "Channel Secret": "",
 >    "Database Path":"/path/of/database"
 > }
+
 ## Usage
 你可以用 'help' 印出本訊息
 - 📌  '本月'
