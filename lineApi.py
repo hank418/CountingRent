@@ -12,12 +12,16 @@ from linebot.models import (
 from sqlite import Sqlite3
 import datetime
 import time
+import json
 
 app = Flask(__name__)
 sql = Sqlite3()
 
-line_bot_api = LineBotApi('Channel Access Token')
-handler = WebhookHandler('Channel Secret')
+with open('secure.key') as data_file:
+    data = json.load(data_file)
+
+line_bot_api = LineBotApi(data["Channel Access Token"])
+handler = WebhookHandler(data["Channel Secret"])
 
 helpMessage = '''你可以用 'help' 印出本訊息
 \ud83d\udccc '本月'

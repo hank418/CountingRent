@@ -3,8 +3,12 @@
 
 import sqlite3
 import os.path
+import json
 
-DB_NAME = "path/of/database"
+with open('secure.key') as data_file:
+    data = json.load(data_file)
+
+DB_NAME = data["Database Path"] 
 
 class Sqlite3:
     def __init__(self):
