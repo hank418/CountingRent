@@ -196,7 +196,7 @@ def printRent(replyToken, thisMonthly, lastMonthly):
         thisMonthDate = thisMonthly[2]
         year = int(thisMonthDate[0:4])
         month = int(thisMonthDate[4:6])
-        rentInfo = "--%d/%d月份--\n電錶%d度-上期%d度=%d度\n%d度*5.5元=%.0d元\n+公區費%d元\n+房租9000元\n+清潔費300元\n=合計%d元" % (year, month, thisMonthKwh, lastMonthKwh, deltaKwh, deltaKwh, deltaKwh * 5.5, deltaKwh, 9300 + (deltaKwh * 5.5) + deltaKwh)
+        rentInfo = "--%d/%d月份--\n電錶%d度-上期%d度=%d度\n%d度*5.5元=%.0d元\n+公區費%d元\n+房租9000元\n=合計%d元" % (year, month, thisMonthKwh, lastMonthKwh, deltaKwh, deltaKwh, deltaKwh * 5.5, deltaKwh, 9000 + (deltaKwh * 5.5) + deltaKwh)
         replyMessage(replyToken, rentInfo)
     else:
         replyMessage(event.reply_token, "本月%d度，但沒有上個月資料比對", thisMonthly[3]) 
