@@ -51,6 +51,12 @@ class Sqlite3:
         self.commit()
         self.close()
 
+    def updateKwhWithUserIdMonths(self, kwh, userId, months):
+        self.open()
+        self.conn_cursor.execute('''UPDATE Monthly SET kwh=? WHERE userId=? AND months=?''',(kwh, userId, months))
+        self.commit()
+        self.close()
+
     def fetchMonthly(self, userId, months):
         self.open()
         self.conn_cursor.execute('''SELECT * FROM Monthly WHERE userId=? AND months=?''',(userId, months))
