@@ -17,7 +17,7 @@ import json
 app = Flask(__name__)
 sql = Sqlite3()
 
-with open('secure.key') as data_file:
+with open('/vol/secure.key') as data_file:
     data = json.load(data_file)
 
 line_bot_api = LineBotApi(data["Channel Access Token"])

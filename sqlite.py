@@ -5,7 +5,7 @@ import sqlite3
 import os.path
 import json
 
-with open('secure.key') as data_file:
+with open('/vol/secure.key') as data_file:
     data = json.load(data_file)
 
 DB_NAME = data["Database Path"] 
