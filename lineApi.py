@@ -206,6 +206,6 @@ def replyMessage(replyToken, message):
     line_bot_api.reply_message(replyToken, TextSendMessage(text=message))
 
 if __name__ == "__main__":
-    context = ('dnhuang.me.crt','dnhuang.me.key')
+    context = ('fullchain.pem','privkey.pem')
     app.run(host='0.0.0.0', port='8000', ssl_context=context)
 
