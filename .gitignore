@@ -96,3 +96,4 @@ ENV/
 *.crt
 *.db
 *.swp
+*.pem
